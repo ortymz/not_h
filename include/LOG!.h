@@ -3,7 +3,18 @@
  *
  * Use with care.
  *
+ * #include "LOG!.h"
+ *
+ * LOGH_DEF(ERROR);
+ * LOGH_DEF(WARN);
+ *
+ * ...
+ *
+ * LOGH_ERROR("I am an error");
+ * LOGH_WARN("I am a warning");
+ *
  * Do not declare these functions in an actual header.
+ * Do not use LOGH_DEF(...) inside of a scope.
  *
  *****************************************************************************/
 

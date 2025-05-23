@@ -3,7 +3,23 @@
  *
  * Use with care.
  *
+ * #include "MATRIX!.h"
+ *
+ * MATRIX_H_TYPE_DEF(3, 3);
+ * MATRIX_H_ADD_DEF(3, 3);
+ * MATRIX_H_PRINT_DEF(3, 3);
+ *
+ * ...
+ *
+ * Mat3x3 matrix1 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, };
+ * Mat3x3 matrix2 = { { 3, 2, 1 }, { 6, 5, 4 }, { 9, 7, 8 }, };
+ *
+ * Mat3x3 result;
+ * Mat3x3_add(&matrix1, &matrix2, &result);
+ * Mat3x3_print(&result);
+ *
  * Do not declare these functions in an actual header.
+ * Do not use MATRIX_H_***_DEF(...) inside of a scope.
  *
  *****************************************************************************/
 
