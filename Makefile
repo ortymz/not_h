@@ -14,11 +14,14 @@ LOG_H := $(INCLUDE)/LOG!.h
 
 all: $(BUILD)/LOG!_test $(BUILD)/MATRIX!_test
 
-$(BUILD)/LOG!_test: $(LOG_test) $(INCLUDE)/LOG!.h
+$(BUILD)/LOG!_test: $(LOG_test) $(INCLUDE)/LOG!.h $(BUILD)/
 	$(CC) $(LOG_test) -o $(BUILD)/LOG!_test $(FLAGS)
 
-$(BUILD)/MATRIX!_test: $(MATRIX_test) $(INCLUDE)/MATRIX!.h
+$(BUILD)/MATRIX!_test: $(MATRIX_test) $(INCLUDE)/MATRIX!.h $(BUILD)/
 	$(CC) $(MATRIX_test) -o $(BUILD)/MATRIX!_test $(FLAGS)
 
+$(BUILD)/:
+	mkdir $(BUILD)
+
 clean:
-	rm -rf build/*
+	rm -rf build
